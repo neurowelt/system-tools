@@ -1,10 +1,10 @@
 #! /bin/bash
 
-get_os () {
+get_os() {
     echo "$(uname -o)"
 }
 
-get_machine () {
+get_machine() {
     echo "$(uname -m)"
 }
 
