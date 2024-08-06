@@ -13,7 +13,7 @@ _HAIKU="haiku"
 
 get_os() {
     # Retrieve the operating system name
-    os=$OSTYPE
+    local os=$OSTYPE
     if [[ -z "$os" ]]; then
         os=$(uname -o)
     fi
@@ -34,7 +34,7 @@ is_compatible() {
     fi
 
     # Check comaptibility with each supported OS
-    is_compatible=0
+    local is_compatible=0
     for os_name in "$@"; do
         current_os=$(get_os)
         echo "Checking compatibility with $os_name"
@@ -42,9 +42,9 @@ is_compatible() {
 
         # Check name containing both ways
         echo "$os_name" | grep -q "$current_os"
-        os_to_cos=$?
+        local os_to_cos=$?
         echo "$current_os" | grep -q "$os_name"
-        cos_to_os=$?
+        local cos_to_os=$?
         if [[ $cos_to_os -eq 0 || $os_to_cos -eq 0 ]]; then
             is_compatible=1
             echo "Script is compatible"
@@ -59,8 +59,8 @@ is_compatible() {
 }
 
 main() {
-    os=$(get_os)
-    machine=$(get_machine)
+    local os=$(get_os)
+    local machine=$(get_machine)
     echo "Your machine type is: $machine"
     echo "Your operating system is: $os"
 }
