@@ -1,4 +1,7 @@
-#! /bin/bash
+#!/bin/bash
+#
+# Retrieve basic information about the machine and operating system
+# Provide compatibility check for other scripts and system naming conventions
 
 _LINUX="linux-gnu"
 _MACOS="darwin"
@@ -11,8 +14,14 @@ _SOLARIS="solaris"
 _ANDROID="linux-android"
 _HAIKU="haiku"
 
+#######################################
+# Retrieve operating system name
+# Globals:
+#   OSTYPE (bash built-in)
+# Returns:
+#   Operating system name to stdout
+#######################################
 get_os() {
-    # Retrieve the operating system name
     local os=$OSTYPE
     if [[ -z "$os" ]]; then
         os=$(uname -o)
@@ -20,16 +29,27 @@ get_os() {
     echo "$os"
 }
 
+#######################################
+# Retrieve machine type name
+# Returns:
+#   Machine type name to stdout
+#######################################
 get_machine() {
-    # Retrieve machine type
     echo "$(uname -m)"
 }
 
+#######################################
+# Checks if script is compatible with OS
+# Arguments:
+#   OS name(s) to check compatibility with
+# Returns:
+#   Stdout message if compatible, exit 1 otherwise
+#######################################
 is_compatible() {
-    # Return an information if given script is compatible with current OS
     # We require OS name passed as argument
     if [[ -z $1 ]]; then
         echo "Usage: is_compatible <os-name> <os-name-2> ..."
+        echo "See architecture.sh for common OS names"
         exit 1
     fi
 
@@ -59,6 +79,11 @@ is_compatible() {
     fi
 }
 
+#######################################
+# Main script method
+# Returns:
+#   Machine type and OS name to stdout
+#######################################
 main() {
     local os=$(get_os)
     local machine=$(get_machine)
