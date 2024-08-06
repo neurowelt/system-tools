@@ -10,7 +10,6 @@ In the table below you will find short descriptions of all available scripts and
 * **Standalone** - Is this script runnable as a standalone process, i.e. it does not require other scripts to be used? (_see note below the table for more information on exceptions_)
 
 <br>
-
 <div align="center">
 
 | Script | Description | Runnable | Modular | Standalone |
@@ -18,6 +17,7 @@ In the table below you will find short descriptions of all available scripts and
 | `architecture.sh` | Return operating system and machine name. | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 </div>
+<br>
 
 > Most of the scripts will contain a method from `architecture.sh` script called `is_compatible`. It is placed at the beginning of the script to indicate on which platform the script was confirmed to successfully run. This method does not count into the **Standalone** category criteria.
 
@@ -35,7 +35,6 @@ Each entry in the table contains the following information:
     * :wastebasket: - Script has been discarded
 
 <br>
-
 <div align="center">
 
 | Script | Description | Status | Branch |
@@ -44,6 +43,7 @@ Each entry in the table contains the following information:
 | `check_gpu.sh` | Return current information about GPU usage. | :pencil2: | - |
 
 </div>
+<br>
 
 Do you have any ideas? Feel free to open an issue or a pull request!
 
