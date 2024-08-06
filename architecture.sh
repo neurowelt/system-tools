@@ -48,6 +48,7 @@ is_compatible() {
         if [[ $cos_to_os -eq 0 || $os_to_cos -eq 0 ]]; then
             is_compatible=1
             echo "Script is compatible"
+            break
         fi
     done
 
