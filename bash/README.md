@@ -16,3 +16,5 @@ In the table below you will find short descriptions of all available bash script
 <br>
 
 > Most of the scripts will contain a method from `architecture.sh` script called `is_compatible`. It is placed at the beginning of the script to indicate on which platform the script was confirmed to successfully run. This method does not count into the **Standalone** category criteria.
+
+Convention followed in this repository aims to be as consistent with [Google's bash scripting convention](https://google.github.io/styleguide/shellguide.html) as possible. If you find any inconsistencies, feel encouraged to open an issue.

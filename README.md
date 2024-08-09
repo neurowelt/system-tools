@@ -43,6 +43,4 @@ Each entry in the table contains the following information:
 
 Main motivation beind this repository is to learn bash scripting and have a collection of different variety of scripts that come in handy in day to day wandering around the operating system.
 
-Convention followed in this repository aims to be as consistent with [Google's bash scripting convention](https://google.github.io/styleguide/shellguide.html) as possible. If you find any inconsistencies, feel encouraged to open an issue.
-
 Another goal is to include other programming languages and build a library of scripts that either directly interact with system processes or utilize tools gathered in this repository to achieve that interaction.
