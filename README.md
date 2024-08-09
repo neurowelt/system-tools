@@ -1,54 +1,48 @@
 # System Tools
 
-Various system level scripts and tools that allow for easier working with system processes.
+Various scripts, tools and knowledge that help working with system processes.
 
-## Scripts
+## Projects
 
-In the table below you will find short descriptions of all available scripts and an information whether:
-* **Runnable** - Is this script runnable, i.e. does it do anything meaningful when `bash`ed?
-* **Modular** - Can this script be imported for its methods into other scripts?
-* **Standalone** - Is this script runnable as a standalone process, i.e. it does not require other scripts to be used? (_see note below the table for more information on exceptions_)
+All code and materials found in this repository are generally called **projects**. Each project can be a separate script, a collection of scripts or a document.
 
-<br>
-<div align="center">
+Projects are separated simply by the language they were written in (for documents, we treat _human languages_ as a single group). 
 
-| Script | Description | Runnable | Modular | Standalone |
-|:------:|:-----------:|:--------:|:-------:|:----------:|
-| `architecture.sh` | Return operating system and machine name. | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-
-</div>
-<br>
-
-> Most of the scripts will contain a method from `architecture.sh` script called `is_compatible`. It is placed at the beginning of the script to indicate on which platform the script was confirmed to successfully run. This method does not count into the **Standalone** category criteria.
+For more detailed information about what is the current status of all the scripts in this repository and what is their purpose, feel free to check out the existing directories:
+* [Bash](./bash/)
 
 ## Development
 
-Below you will find a table of scripts and improvements that are either under development or planned to be implemented in the future.
+Below you will find a table of projects that are either under development or planned to be implemented in the future. These include scripts, improvements to existing scripts or the repository in general.
 
 Each entry in the table contains the following information:
-* **Script** - Name of the script (might be subject to change)
-* **Description** - Short description of the script's purpose
-* **Status** - Current status of the script development:
-    * :computer: - Script is under development
-    * :pencil2: - Script is planned to be developed
-    * :stop_sign: - Script's development has been halted
-    * :wastebasket: - Script has been discarded
+* **Name** - Name of the project (might be subject to change)
+* **Type** - Type of the project (script, improvement, etc.)
+* **Description** - Short description of the project purpose
+* **Status** - Current status of the project development:
+    * :computer: - in progress
+    * :pencil2: - draft & planning
+    * :stop_sign: - progress halted
+    * :wastebasket: - discontinued
 
 <br>
 <div align="center">
 
-| Script | Description | Status | Branch |
-|:------:|:-----------:|:------:|:------:|
-| `check_cpu.sh` | Return current information about CPU load. | :computer: | [`scripts/check_cpu`](https://github.com/neurowelt/system-tools/tree/scripts/check_cpu) |
-| `check_gpu.sh` | Return current information about GPU usage. | :pencil2: | - |
+| Name | Type | Description | Status | Branch |
+|:----:|:----:|:-----------:|:------:|:------:|
+| `check_cpu.sh` | Bash script | Return current information about CPU load. | :computer: | [`scripts/check_cpu`](https://github.com/neurowelt/system-tools/tree/scripts/check_cpu) |
+| `check_gpu.sh` | Bash script | Return current information about GPU usage. | :pencil2: | - |
 
 </div>
 <br>
 
-Do you have any ideas? Feel free to open an issue or a pull request!
+> [!NOTE]
+> Do you have any ideas? Feel free to open an issue or a pull request!
 
 ## Notes
 
 Main motivation beind this repository is to learn bash scripting and have a collection of different variety of scripts that come in handy in day to day wandering around the operating system.
 
 Convention followed in this repository aims to be as consistent with [Google's bash scripting convention](https://google.github.io/styleguide/shellguide.html) as possible. If you find any inconsistencies, feel encouraged to open an issue.
+
+Another goal is to include other programming languages and build a library of scripts that either directly interact with system processes or utilize tools gathered in this repository to achieve that interaction.
