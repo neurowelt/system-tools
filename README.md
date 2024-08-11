@@ -11,14 +11,15 @@ All code and materials found in this repository are generally called **projects*
 
 Projects are separated into directories based on their purpose. Each directory contains it's own introductory `README.md` file that provides a brief overview of its contents and more detailed information about the usage of each project.
 
-In the table below you will find a list of all directories and a short description of what type of projects they contain.
+In the table below you will find a list of all directories and a short description of the purpose that contained projects have in common.
 
 <br>
 <div align="center">
 
-| Directory | Description |
+| Directory | Purpose |
 |:---------:|:-----------:|
-| [`information`](./information/) | Contains scripts that provide information about the system and its components (memory, CPU/GPU, disk space, etc.) |
+| [`information`](./information/) | Retrieving information about the system and its components (memory, CPU/GPU, disk space, etc.) |
+| [`execution`](./execution/) | Executing, controlling and affecting processes |
 
 </div>
 <br>
@@ -40,6 +41,7 @@ In the table below you will find short descriptions of all completed projects an
 | Name | Type | Description | Languages |
 |:------:|:-----------:|:--------:|:-------:|
 | [`architecture.sh`](./information/architecture.sh) | Script | Return operating system and machine name, check OS compatibility | Bash |
+| [`restart_process.sh`](./execution/restart_process.sh) | Script | Run process and restart it if it exits with an error | Bash |
 
 </div>
 <br>

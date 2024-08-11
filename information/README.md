@@ -13,6 +13,26 @@ List of projects in this directory:
 
 Script that returns the operating system and machine name, as well as provides OS compatibility check function.
 
+General usage:
+```bash
+bash architecture.sh
+```
+
+Methods:
+* `get_os` - Return operating system name
+    * Returns:
+        * Operating system name
+
+* `get_machine` - Return machine name
+    * Returns:
+        * Machine name
+* `is_compatible` - Check if the current OS is compatible with the provided list of OS names
+    * Arguments:
+        * `os_names` - List of OS names to check compatibility with
+    * Returns:
+        * `1` if the current OS is not compatible
+        * Message that the OS is compatible
+
 Use cases:
 * Check your OS and machine name:
 
