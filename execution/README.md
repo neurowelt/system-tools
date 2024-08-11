@@ -46,3 +46,7 @@ Use cases:
 
     restart_process bash error_process.sh
     ```
+
+## Testing
+
+You can find example scripts to test the functionality of the execution projects in the [`testing`](./testing/) directory.
