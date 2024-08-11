@@ -23,7 +23,8 @@ restart_process() {
         "$@"
         exit_code=$?
         if [[ $exit_code -eq 0 ]]; then
-            exit 0
+            echo "Process finished successfully"
+            break
         else
             echo "Process crashed with exit code $exit_code. Restarting..."
             sleep 1

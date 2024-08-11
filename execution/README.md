@@ -24,8 +24,7 @@ Methods:
         * `process` - Process to run
         * `args` - Arguments for the process
     * Returns:
-        * Message with error exit code of the `process`
-        * `0`  if `process` finishes successfully
+        * Message(s) with exit code of the `process`
 
 Use cases:
 * Restart until success from terminal:
