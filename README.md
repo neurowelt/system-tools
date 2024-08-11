@@ -23,9 +23,8 @@ In the table below you will find a list of all directories and a short descripti
 </div>
 <br>
 
-
 > [!NOTE]
-> Interested in contributing? Check out the [Development](#development) section to see current and future projects or open an issue/PR with your idea! Suggestions about the repository structure, naming conventions or any other aspect are also very welcome :blush:
+> Interested in helping out the repository grow? Check out the [Contributing](#contributing) section for details :blush:
 
 ## Projects
 
@@ -70,14 +69,24 @@ Each entry in the table contains the following information:
 </div>
 <br>
 
-## Notes
-
-### Motivations
+## Motivation
 
 Main motivation beind this repository is to learn bash scripting and have a collection of different variety of scripts that come in handy in day to day wandering around the operating system.
 
 Another goal is to include other programming languages and build a library of scripts that either directly interact with system processes or utilize tools gathered in this repository to achieve that interaction.
 
-### Conventions
+## Contributing
 
-For Bash scripts, this repository aims to follow [Google's bash scripting convention](https://google.github.io/styleguide/shellguide.html) as close as possible. If you find any inconsistencies, feel encouraged to open an issue.
+Contributions are always welcome! Especially if you:
+* have an idea for a new project, whether it is a script or a document taht provides some insight
+* have a suggestion for improving existing projects
+* found a bug or inconsistency in the code
+* feel like the structure, naming conventions or any other organizational aspect of the repository could be improved
+
+If anything from the above list sounds like you, feel free to open an issue or a pull request. If you are not sure where to start, check out the [Development](#development) section for ideas on what projects are currently in progress or planned for the future.
+
+### Guidelines
+
+When contributing to this repository, please follow these guidelines:
+
+* For Bash scripts, this repository aims to follow [Google's bash scripting convention](https://google.github.io/styleguide/shellguide.html) as close as possible. If you find any inconsistencies, feel encouraged to open an issue.
