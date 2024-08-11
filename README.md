@@ -1,11 +1,13 @@
 # System Tools
 
-Various scripts, tools and knowledge that help working with system processes.
+Make your work with system processes easier and more enjoyable!
 
 ## Overview
 
 > [!IMPORTANT]
 > This repository is in it's early stage and under active development. Please expect changes to it's structure :construction:
+
+Repository contains various scripts, tools and knowledge that help working with system processes.
 
 All code and materials found in this repository are generally called **projects**. Each project can be a separate script, a collection of scripts or a document.
 
