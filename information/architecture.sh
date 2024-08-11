@@ -55,8 +55,8 @@ is_compatible() {
 
     # Check comaptibility with each supported OS
     local is_compatible=0
+    local current_os=$(get_os)
     for os_name in "$@"; do
-        current_os=$(get_os)
         echo "Checking compatibility with $os_name"
         echo "Curent OS is $current_os"
 
