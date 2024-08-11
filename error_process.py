@@ -1,3 +1,6 @@
+"""
+Simple process that raises errors in a loop and randomly succeeds
+"""
 import time
 import random
 
