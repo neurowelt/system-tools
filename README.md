@@ -82,7 +82,7 @@ Another goal is to include other programming languages and build a library of sc
 ## Contributing
 
 Contributions are always welcome! Especially if you:
-* have an idea for a new project, whether it is a script or a document taht provides some insight
+* have an idea for a new project, whether it is a script or a document that provides some insight
 * have a suggestion for improving existing projects
 * found a bug or inconsistency in the code
 * feel like the structure, naming conventions or any other organizational aspect of the repository could be improved
