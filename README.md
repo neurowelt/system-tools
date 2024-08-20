@@ -67,8 +67,8 @@ Each entry in the table contains the following information:
 
 | Name | Type | Description | Status | Branch |
 |:----:|:----:|:-----------:|:------:|:------:|
-| `check_cpu.sh` | Script | Return current information about CPU load | :large_blue_circle: | [`scripts/check_cpu`](https://github.com/neurowelt/system-tools/tree/scripts/check_cpu) |
-| `check_gpu.sh` | Script | Return current information about GPU usage | :white_circle: | - |
+| `hardware.sh` | Script | Information on current status of hardware components such as memory and CPU | :large_blue_circle: | [`feat/hardware`](https://github.com/neurowelt/system-tools/tree/feat/hardware) |
+| `check_gpu.sh` | Script | Information on current status of available GPU | :white_circle: | - |
 
 </div>
 <br>
