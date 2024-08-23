@@ -20,7 +20,7 @@ restart_process() {
     fi
     local exit_code=0
     while true; do
-        "$@"
+        (eval $@)
         exit_code=$?
         if [[ $exit_code -eq 0 ]]; then
             echo "Process finished successfully"
