@@ -35,7 +35,7 @@ get_os() {
 #   Machine type name to stdout
 #######################################
 get_machine() {
-    echo "$(uname -m)"
+    uname -m
 }
 
 #######################################
