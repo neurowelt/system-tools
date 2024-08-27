@@ -44,6 +44,7 @@ In the table below you will find short descriptions of all completed projects an
 |:------:|:-----------:|:--------:|:-------:|
 | [`architecture.sh`](./information/architecture.sh) | Script | Return operating system and machine name, check OS compatibility | Bash |
 | [`restart_process.sh`](./execution/restart_process.sh) | Script | Run process and restart it if it exits with an error | Bash |
+| [`hardware.sh`](./information/hardware.sh) | Script | Return average CPU load, total and used memory | Bash |
 
 </div>
 <br>
@@ -67,7 +68,7 @@ Each entry in the table contains the following information:
 
 | Name | Type | Description | Status | Branch |
 |:----:|:----:|:-----------:|:------:|:------:|
-| `hardware.sh` | Script | Information on current status of hardware components such as memory and CPU | :large_blue_circle: | [`feat/hardware`](https://github.com/neurowelt/system-tools/tree/feat/hardware) |
+| `process.sh` | Script | Information on given processes | :white_circle: | - |
 | `check_gpu.sh` | Script | Information on current status of available GPU | :white_circle: | - |
 
 </div>
