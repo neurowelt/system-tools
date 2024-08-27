@@ -51,7 +51,7 @@ is_compatible() {
     if [[ -z $1 ]]; then
         echo "Usage: is_compatible <os-name> <os-name-2> ... (--silent)"
         echo "Options:"
-        echo "  -s, --silent: Silence all messages"
+        echo "-s, --silent      silence all messages"
         echo "See architecture.sh for common OS names"
         exit 1
     fi
