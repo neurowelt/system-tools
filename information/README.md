@@ -6,7 +6,7 @@ Projects dedicated to:
 
 List of projects in this directory:
 * [`architecture.sh`](#architecturesh) - Return operating system and machine name, check OS compatibility
-* [`hardware.sh](#hardwaresh) - Return average CPU load, total and used memory 
+* [`hardware.sh`](#hardwaresh) - Return average CPU load, total and used memory 
 
 ## Usage
 
