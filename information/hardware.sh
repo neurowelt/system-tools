@@ -8,22 +8,22 @@ fi
 
 source architecture.sh
 
-#######################################
+###
 # Get average loads of the CPU (1, 5 and 15 min)
 # Returns:
 #   Average loads to stdout
-#######################################
+###
 get_cpu_load() {
     uptime | grep -o 'load average[s]*: .*' | grep -o '[0-9.]\+'
 }
 
-#######################################
+###
 # Get percentage of used RAM memory on MacOS
 # Returns:
 #   Memory in percentage to stdout
 # Source:
 #   https://apple.stackexchange.com/questions/81581/
-#######################################
+###
 get_used_ram_percentage_macos() {
     # Gather pages values & size
     local pages=()
@@ -49,11 +49,11 @@ get_used_ram_percentage_macos() {
     echo $(( $accum_mem * 100 / $total_mem))
 }
 
-#######################################
+###
 # Get percentage of used RAM memory
 # Returns:
 #   Memory in percentage to stdout, exit 1 if incompatible
-#######################################
+###
 get_used_ram_percentage() {
     # First check compatibility
     (is_compatible $_LINUX --silent)
@@ -79,12 +79,11 @@ get_used_ram_percentage() {
     fi
 }
 
-
-#######################################
+###
 # Main script method
 # Returns:
 #   Current average CPU loads
-#######################################
+###
 main() {
     echo "Current CPU load (1, 5, 15 min):"
     get_cpu_load

@@ -14,13 +14,13 @@ _SOLARIS="solaris"
 _ANDROID="linux-android"
 _HAIKU="haiku"
 
-#######################################
+###
 # Retrieve operating system name
 # Globals:
 #   OSTYPE (bash built-in)
 # Returns:
 #   Operating system name to stdout
-#######################################
+###
 get_os() {
     local os=$OSTYPE
     if [[ -z "$os" ]]; then
@@ -29,23 +29,23 @@ get_os() {
     echo "$os"
 }
 
-#######################################
+###
 # Retrieve machine type name
 # Returns:
 #   Machine type name to stdout
-#######################################
+###
 get_machine() {
     uname -m
 }
 
-#######################################
+###
 # Checks if script is compatible with OS
 # Arguments:
 #   OS name(s) to check compatibility with
 #   --silence (-s) flag to suppress
 # Returns:
 #   Stdout message if compatible, exit 1 otherwise
-#######################################
+###
 is_compatible() {
     # We require OS name passed as argument
     if [[ -z $1 ]]; then
@@ -102,11 +102,11 @@ is_compatible() {
     fi
 }
 
-#######################################
+###
 # Main script method
 # Returns:
 #   Machine type and OS name to stdout
-#######################################
+###
 main() {
     local os=$(get_os)
     local machine=$(get_machine)

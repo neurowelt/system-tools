@@ -11,13 +11,13 @@ echo "Warning: This script runs indefinitely until exit code is 0."
 echo "Simple interruption will stop it (Ctrl+C)."
 sleep 1
 
-#######################################
+###
 # Runs given command and restarts it until finish
 # Arguments:
 #   Command to run with arguments
 # Returns:
 #   Process stdout & stderr, exit 0 on success
-#######################################
+###
 restart_process() {
     if [[ -z $1 ]]; then
         echo "Usage: restart_process <command> <args>"
@@ -37,9 +37,9 @@ restart_process() {
     done
 }
 
-#######################################
+###
 # Main script method
-#######################################
+###
 main() {
     restart_process "$@"
 }
