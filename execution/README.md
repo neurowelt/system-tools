@@ -50,3 +50,11 @@ Use cases:
 ## Testing
 
 You can find example scripts to test the functionality of the execution projects in the [`testing`](./testing/) directory.
+
+If you run into permission problems for any of the bash testing scripts, simply run:
+
+```bash
+chmod a=rwx path/to/script.sh
+```
+
+This commend provides read, write and execute permissions for that file.

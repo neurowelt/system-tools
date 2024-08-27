@@ -3,16 +3,21 @@
 # Run given process in a loop and restart on errors
 # Process is run until this process is interrupted or the child process succeeds
 
+echo "Critical warning: Only run this script if you intend to."
+echo "Due to the evaluation of passed arguments malicious code can be executed on your computer."
+sleep 2
+
 echo "Warning: This script runs indefinitely until exit code is 0."
 echo "Simple interruption will stop it (Ctrl+C)."
+sleep 1
 
-#######################################
+###
 # Runs given command and restarts it until finish
 # Arguments:
 #   Command to run with arguments
 # Returns:
 #   Process stdout & stderr, exit 0 on success
-#######################################
+###
 restart_process() {
     if [[ -z $1 ]]; then
         echo "Usage: restart_process <command> <args>"
@@ -20,7 +25,7 @@ restart_process() {
     fi
     local exit_code=0
     while true; do
-        "$@"
+        ($@)
         exit_code=$?
         if [[ $exit_code -eq 0 ]]; then
             echo "Process finished successfully"
@@ -32,9 +37,9 @@ restart_process() {
     done
 }
 
-#######################################
+###
 # Main script method
-#######################################
+###
 main() {
     restart_process "$@"
 }

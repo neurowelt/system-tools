@@ -6,3 +6,6 @@ __pycache__/*
 # General 
 .DS_Store
 .vscode/*
+
+# Development
+test.sh
