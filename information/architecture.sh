@@ -42,23 +42,42 @@ get_machine() {
 # Checks if script is compatible with OS
 # Arguments:
 #   OS name(s) to check compatibility with
+#   --silence (-s) flag to suppress
 # Returns:
 #   Stdout message if compatible, exit 1 otherwise
 #######################################
 is_compatible() {
     # We require OS name passed as argument
     if [[ -z $1 ]]; then
-        echo "Usage: is_compatible <os-name> <os-name-2> ..."
+        echo "Usage: is_compatible <os-name> <os-name-2> ... (--silent)"
+        echo "Options:"
+        echo "  -s, --silent: Silence all messages"
         echo "See architecture.sh for common OS names"
         exit 1
     fi
 
+    # Parse input argumemnts
+    local os_names=()
+    local silent=false
+    while [ $# -gt 0 ] ; do
+        case $1 in
+            -s | --silent)
+                silent=true
+                ;;
+            *)
+                os_names+=($1)
+        esac
+        shift
+    done
+
     # Check comaptibility with each supported OS
     local is_compatible=0
     local current_os=$(get_os)
-    for os_name in "$@"; do
-        echo "Checking compatibility with $os_name"
-        echo "Curent OS is $current_os"
+    for os_name in "${os_names[@]}"; do
+        if ! [[ $silent == true ]]; then
+            echo "Checking compatibility with $os_name"
+            echo "Curent OS is $current_os"
+        fi
 
         # Check name containing both ways
         echo "$os_name" | grep -q "$current_os"
@@ -67,14 +86,18 @@ is_compatible() {
         local cos_to_os=$?
         if [[ $cos_to_os -eq 0 || $os_to_cos -eq 0 ]]; then
             is_compatible=1
-            echo "Script is compatible"
+            if ! [[ $silent == true ]]; then
+                echo "Script is compatible"
+            fi
             break
         fi
     done
 
     if [[ $is_compatible -eq 0 ]]; then
         # Not compatible with any of supported OS
-        echo "Script is not compatible with current OS"
+        if ! [[ $silent == true ]]; then
+            echo "Script is not compatible with current OS"
+        fi
         exit 1
     fi
 }

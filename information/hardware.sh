@@ -32,6 +32,7 @@ get_used_ram_percentage_macos() {
     pages[2]="Pages speculative"
     pages[5]="Pages occupied by compressor"
     pages[6]="File backed pages"
+
     macos_pagesize=$(pagesize)
     total_mem=$(sysctl -n hw.memsize)
     accum_mem=0
@@ -55,9 +56,9 @@ get_used_ram_percentage_macos() {
 #######################################
 get_used_ram_percentage() {
     # First check compatibility
-    (is_compatible $_LINUX)
+    (is_compatible $_LINUX --silent)
     local is_linux=$?
-    (is_compatible $_MACOS)
+    (is_compatible $_MACOS --silent)
     local is_macos=$?
 
     # Check memory accordingly
