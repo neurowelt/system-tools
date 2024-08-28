@@ -68,7 +68,7 @@ Each entry in the table contains the following information:
 
 | Name | Type | Description | Status | Branch |
 |:----:|:----:|:-----------:|:------:|:------:|
-| `process.sh` | Script | Information on given processes | :white_circle: | - |
+| `process.sh` | Script | Information on given processes | :large_blue_circle: | [`feat/process`](https://github.com/neurowelt/system-tools/tree/feat/process) |
 | `check_gpu.sh` | Script | Information on current status of available GPU | :white_circle: | - |
 
 </div>
