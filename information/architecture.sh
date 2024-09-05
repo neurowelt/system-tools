@@ -42,7 +42,7 @@ get_machine() {
 # Checks if script is compatible with OS
 # Arguments:
 #   OS name(s) to check compatibility with
-#   --silence (-s) flag to suppress
+#   --silence (-s) flag to suppress messages
 # Returns:
 #   Stdout message if compatible, exit 1 otherwise
 ###

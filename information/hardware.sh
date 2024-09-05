@@ -21,7 +21,7 @@ get_cpu_load() {
 ###
 # Get total RAM memory size
 # Args:
-#   -b/k/m/g/t/p flags for return format
+#   -b/k/m/g/t/p flags for size return format
 #   --si flag for using base 1000 instead of 1024
 #   -h, --help for printing usage and allowed formats
 # Returns:

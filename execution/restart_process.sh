@@ -14,7 +14,7 @@ sleep 1
 ###
 # Runs given command and restarts it until finish
 # Arguments:
-#   Command to run with arguments
+#   Command and its arguments to run with restarting
 # Returns:
 #   Process stdout & stderr, exit 0 on success
 ###
@@ -39,6 +39,10 @@ restart_process() {
 
 ###
 # Main script method
+# Arguments:
+#   Command and its arguments to run with restarting
+# Returns:
+#   Same as restart_process
 ###
 main() {
     restart_process "$@"
